@@ -1,4 +1,4 @@
- .navbar {
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -15,13 +15,21 @@
     left: 0;
     right: 0;
     z-index: 1000;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
-.profile{
+.navbarDark {
+    background: linear-gradient(135deg, #07131f 0%, #112a3b 55%, #0b1c16 100%);
+    color: #f4fff7;
+    box-shadow: 0 18px 40px rgba(2, 10, 17, 0.35);
+}
+
+.profile {
     max-width: 60px;
     border-radius: 50%;
     border: 2px solid rgba(255, 255, 255, 0.8);
 }
+
 .brand {
     font-size: 1.2rem;
     font-weight: 700;
@@ -60,7 +68,34 @@
     transform: translateY(-1px);
 }
 
+.navButtonDark {
+    background: rgba(9, 24, 33, 0.8);
+    border-color: rgba(110, 231, 183, 0.4);
+    color: #f4fff7;
+}
+
+.navButtonDark:hover {
+    background-color: rgba(14, 38, 50, 0.94);
+    border-color: rgba(110, 231, 183, 0.55);
+}
+
 .navButton:focus-visible {
     outline: 3px solid rgba(255, 255, 255, 0.85);
     outline-offset: 3px;
+}
+
+.themeIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+}
+
+.iconActive {
+    color: inherit;
+    transition: transform 0.2s ease;
+}
+
+.navButton:hover .iconActive {
+    transform: rotate(12deg) scale(1.05);
 }
